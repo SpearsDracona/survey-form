@@ -1,9 +1,16 @@
+:root {
+    --main-bg-color: #171d1f;
+    --content-bg-color: #2a3235;
+    --main-text-color: #c2d0d4;
+    --accent-color: #3fc3f7;
+}
+
 body {
     width: 100%;
     height: 100vh;
     margin: 0;
-    background-color: #171d1f;
-    color: #c2d0d4;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
     font-size: 16px;
     font-family: sans-serif;
 }
@@ -14,7 +21,7 @@ p {
 }
 
 h1 {
-    color: #3fc3f7;
+    color: var(--accent-color);
     margin: 1em auto 0 auto;
     text-align: center;
 }
@@ -27,7 +34,7 @@ legend {
     font-size: 1.5rem;
     font-weight: bold;
     font-style: italic;
-    color: #3fc3f7;
+    color: var(--accent-color);
 }
 
 form {
@@ -40,8 +47,8 @@ form {
 
 fieldset {
     margin: 0 auto 20px auto;
-    background-color: #2a3235;
-    border: 3px solid #3fc3f7;
+    background-color: var(--content-bg-color);
+    border: 3px solid var(--accent-color);
     padding: 10px 20px;
     box-shadow: 5px 5px 15px black;
     border-radius: 15px;
@@ -57,9 +64,10 @@ input, textarea, select {
     margin: 10px 0 0 0;
     width: 100%;
     min-height: 2em;
-    background-color: #171d1f;
-    border: 1px solid #171d1f;
-    color: #c2d0d4;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--main-bg-color);
+    font-size: 16px;
+    color: var(--main-text-color);
 }
 
 .inline {
@@ -74,8 +82,8 @@ input[type="submit"] {
     width: 100%;
     height: 2em;
     font-size: 1.2em;
-    background-color: #3fc3f7;
-    color: #171d1f;
+    background-color: var(--accent-color);
+    color: var(--main-bg-color);
     border: none;
     min-width: 300px;
     font-weight: bold;
