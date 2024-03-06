@@ -1,86 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css">
-        <title>D&D Player Interest Survey</title>
-    </head>
-    <body>
-        <h1 id="title">D&D Player Interest Survey</h1>
-        <p id="description">Please fill out this form so I can gauge people's interest and availability.</p>
-        <form id="survey-form" method ="post" action="">
-            <fieldset>
-                <legend>Personal Information</legend>
-                <label for="name" id="name-label">Name: <input type="text" id="name" name="Name" placeholder="What shall we call you?" required /></label>
-                <label for="email" id="email-label">Email: <input type="email" id="email" name="Email" placeholder="Enter your email address here." required /></label>
-                <label for="number" id="number-label">Age: <input type="number" id="number" name="Age" min="18" max="130" placeholder="18+ only, please."/></label>
-                <label for="dropdown">Pronouns: 
-                    <select id="dropdown" name="Pronouns">
-                        <option value="">(Select one)</option>
-                        <option value="1">Prefer not to say</option>
-                        <option value="2">She/Her</option>
-                        <option value="3">He/Him</option>
-                        <option value="4">They/Them</option>
-                        <option value="5">Other (Let me know in the comments)</option>
-                    </select>
-                </label>
-            </fieldset>
-            <fieldset>
-                <legend>Which module interests you most?</legend>
-                <label for="icewind">
-                    <input id="icewind" type="radio" name="Module" value="Icewind" class="inline" /> <strong>Icewind Dale: Rime of the Frostmaiden</strong> - This adventure takes you to a frozen realm where adventure is served cold. Beneath the unyielding night sky, you’ll explore ancient caves, unravel chilling secrets, and face the wrath of the Frostmaiden herself in a desperate struggle to save Ten-Towns from everlasting darkness.
-                </label>
-                <label for="dragonlance">
-                    <input id="dragonlance" type="radio" name="Module" value="Dragonlance" class="inline"> <strong>Dragonlance: Shadow of the Dragon Queen</strong> - An epic adventure set during the legendary War of the Lance. As you explore this iconic world, you’ll face a continent-spanning conflict against the seemingly unstoppable Dragon Army. Expect high stakes and epic fantasy.
-                </label>
-                <label for="witchlight">
-                    <input id="witchlight" type="radio" name="Module" value="Witchlight" class="inline"> <strong>The Wild Beyond the Witchlight</strong> - A whimsical and mysterious adventure where once every eight years, the enchanting Witchlight Carnival graces your world. But beyond the dazzling show lies a Feywild domain called Prismeer, where time has taken a dark turn, and thwarting the schemes of the Hourglass Coven becomes your urgent quest.
-                </label>
-                <label for="avernus">
-                    <input id="avernus" type="radio" name="Module" value="Avernus" class="inline" /> <strong>Descent into Avernus</strong> - An epic adventure that plunges you into a twisted infernal realm, where corruption, bargains, and demonic machinations shape your fate. Will you rise as a hero or succumb to the flames?
-                </label>
-                <label for="strahd">
-                    <input id="strahd" type="radio" name="Module" value="Strahd" class="inline" /> <strong>Curse of Strahd</strong> - Be immersed in a gothic horror realm, where a powerful vampire lord holds sway over a nightmarish domain. Prepare for terror, dread, and a desperate struggle for survival as you navigate the twisted streets of Barovia.
-                </label>
-            </fieldset>
-            <fieldset>
-                <legend>Scheduling</legend>
-                Which time slots are you available to play?
-                <label for="sun2-5pm">
-                    <input id="sun2-5pm" type="checkbox" name="timeslot" value="sun2-5pm" class="inline" /> Sunday 2 - 5 PM EST
-                </label>
-                <label for="mon2-5pm">
-                    <input id="mon2-5pm" type="checkbox" name="timeslot" value="mon2-5pm" class="inline" /> Monday 2 - 5 PM EST
-                </label>
-                <label for="tue2-5pm">
-                    <input id="tue2-5pm" type="checkbox" name="timeslot" value="tue2-5pm" class="inline" /> Tuesday 2 - 5 PM EST
-                </label>
-                <label for="wed2-5pm">
-                    <input id="wed2-5pm" type="checkbox" name="timeslot" value="wed2-5pm" class="inline" /> Wednesday 2 - 5 PM EST
-                </label>
-                <label for="thu2-5pm">
-                    <input id="thu2-5pm" type="checkbox" name="timeslot" value="thu2-5pm" class="inline" /> Thursday 2 - 5 PM EST
-                </label>
-                <label for="fri2-5pm">
-                    <input id="fri2-5pm" type="checkbox" name="timeslot" value="fri2-5pm" class="inline" /> Friday 2 - 5 PM EST
-                </label>
-                <label for="sat2-5pm">
-                    <input id="sat2-5pm" type="checkbox" name="timeslot" value="sat2-5pm" class="inline" /> Saturday 2 - 5 PM EST
-                </label>
-                <label for="frequency">How frequently would you like to play?
-                    <select id="frequency" name="Frequency">
-                        <option value="">(Select one)</option>
-                        <option value="1">Weekly</option>
-                        <option value="2">Every other week</option>
-                    </select>
-                </label>
-            </fieldset>
-            <fieldset>
-                <legend>Other Comments</legend>
-                <textarea id="comments" name="comments" rows="5" cols="25" placeholder="Enter anything else you would like to mention here."></textarea>
-            </fieldset>
-            <input type="submit" value="Submit" id="submit" />
-        </form>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>D&D Player Interest Survey</title>
+  </head>
+  <body>
+    <h1 id="title">D&D Player Interest Survey</h1>
+    <p id="description">
+      Please fill out this form so I can gauge people's interest and
+      availability.
+    </p>
+    <form id="survey-form" method="post" action="">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name" id="name-label"
+          >Name:
+          <input
+            type="text"
+            id="name"
+            name="Name"
+            placeholder="What shall we call you?"
+            required
+        /></label>
+        <label for="email" id="email-label"
+          >Email:
+          <input
+            type="email"
+            id="email"
+            name="Email"
+            placeholder="Enter your email address here."
+            required
+        /></label>
+        <label for="number" id="number-label"
+          >Age:
+          <input
+            type="number"
+            id="number"
+            name="Age"
+            min="18"
+            max="130"
+            placeholder="18+ only, please."
+        /></label>
+        <label for="dropdown"
+          >Pronouns:
+          <select id="dropdown" name="Pronouns">
+            <option value="">(Select one)</option>
+            <option value="1">Prefer not to say</option>
+            <option value="2">She/Her</option>
+            <option value="3">He/Him</option>
+            <option value="4">They/Them</option>
+            <option value="5">Other (Let me know in the comments)</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Which module interests you most?</legend>
+        <label for="icewind">
+          <input
+            id="icewind"
+            type="radio"
+            name="Module"
+            value="Icewind"
+            class="inline"
+          />
+          <strong>Icewind Dale: Rime of the Frostmaiden</strong> - This
+          adventure takes you to a frozen realm where adventure is served cold.
+          Beneath the unyielding night sky, you’ll explore ancient caves,
+          unravel chilling secrets, and face the wrath of the Frostmaiden
+          herself in a desperate struggle to save Ten-Towns from everlasting
+          darkness.
+        </label>
+        <label for="dragonlance">
+          <input
+            id="dragonlance"
+            type="radio"
+            name="Module"
+            value="Dragonlance"
+            class="inline"
+          />
+          <strong>Dragonlance: Shadow of the Dragon Queen</strong> - An epic
+          adventure set during the legendary War of the Lance. As you explore
+          this iconic world, you’ll face a continent-spanning conflict against
+          the seemingly unstoppable Dragon Army. Expect high stakes and epic
+          fantasy.
+        </label>
+        <label for="witchlight">
+          <input
+            id="witchlight"
+            type="radio"
+            name="Module"
+            value="Witchlight"
+            class="inline"
+          />
+          <strong>The Wild Beyond the Witchlight</strong> - A whimsical and
+          mysterious adventure where once every eight years, the enchanting
+          Witchlight Carnival graces your world. But beyond the dazzling show
+          lies a Feywild domain called Prismeer, where time has taken a dark
+          turn, and thwarting the schemes of the Hourglass Coven becomes your
+          urgent quest.
+        </label>
+        <label for="avernus">
+          <input
+            id="avernus"
+            type="radio"
+            name="Module"
+            value="Avernus"
+            class="inline"
+          />
+          <strong>Descent into Avernus</strong> - An epic adventure that plunges
+          you into a twisted infernal realm, where corruption, bargains, and
+          demonic machinations shape your fate. Will you rise as a hero or
+          succumb to the flames?
+        </label>
+        <label for="strahd">
+          <input
+            id="strahd"
+            type="radio"
+            name="Module"
+            value="Strahd"
+            class="inline"
+          />
+          <strong>Curse of Strahd</strong> - Be immersed in a gothic horror
+          realm, where a powerful vampire lord holds sway over a nightmarish
+          domain. Prepare for terror, dread, and a desperate struggle for
+          survival as you navigate the twisted streets of Barovia.
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Scheduling</legend>
+        Which time slots are you available to play?
+        <label for="sun2-5pm">
+          <input
+            id="sun2-5pm"
+            type="checkbox"
+            name="timeslot"
+            value="sun2-5pm"
+            class="inline"
+          />
+          Sunday 2 - 5 PM EST
+        </label>
+        <label for="mon2-5pm">
+          <input
+            id="mon2-5pm"
+            type="checkbox"
+            name="timeslot"
+            value="mon2-5pm"
+            class="inline"
+          />
+          Monday 2 - 5 PM EST
+        </label>
+        <label for="tue2-5pm">
+          <input
+            id="tue2-5pm"
+            type="checkbox"
+            name="timeslot"
+            value="tue2-5pm"
+            class="inline"
+          />
+          Tuesday 2 - 5 PM EST
+        </label>
+        <label for="wed2-5pm">
+          <input
+            id="wed2-5pm"
+            type="checkbox"
+            name="timeslot"
+            value="wed2-5pm"
+            class="inline"
+          />
+          Wednesday 2 - 5 PM EST
+        </label>
+        <label for="thu2-5pm">
+          <input
+            id="thu2-5pm"
+            type="checkbox"
+            name="timeslot"
+            value="thu2-5pm"
+            class="inline"
+          />
+          Thursday 2 - 5 PM EST
+        </label>
+        <label for="fri2-5pm">
+          <input
+            id="fri2-5pm"
+            type="checkbox"
+            name="timeslot"
+            value="fri2-5pm"
+            class="inline"
+          />
+          Friday 2 - 5 PM EST
+        </label>
+        <label for="sat2-5pm">
+          <input
+            id="sat2-5pm"
+            type="checkbox"
+            name="timeslot"
+            value="sat2-5pm"
+            class="inline"
+          />
+          Saturday 2 - 5 PM EST
+        </label>
+        <label for="frequency"
+          >How frequently would you like to play?
+          <select id="frequency" name="Frequency">
+            <option value="">(Select one)</option>
+            <option value="1">Weekly</option>
+            <option value="2">Every other week</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Other Comments</legend>
+        <textarea
+          id="comments"
+          name="comments"
+          rows="5"
+          cols="25"
+          placeholder="Enter anything else you would like to mention here."
+        ></textarea>
+      </fieldset>
+      <input type="submit" value="Submit" id="submit" />
+    </form>
+  </body>
 </html>
